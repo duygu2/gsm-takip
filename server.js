@@ -1,15 +1,5 @@
 var mosca = require('mosca')
 
-const app = new mosca.Server({
-  port: 1883
-});
-
-const port = process.env.PORT || 3000
-
-app.get('/', (req, res) => res.send('Merhaba Dünya!'))
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-
-
 var backend = {
   type: 'redis',
   redis: require('redis'),
