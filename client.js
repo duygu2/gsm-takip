@@ -8,7 +8,7 @@ client.on('connect', function() {
 	console.log('connected!');
 
 	client.subscribe('new-user',function(){
-        client.publish('new-user', 'Mehmet-' + Math.ceil(Math.random() * 10),{
+        client.publish('new-user', 'Duygu-' + Math.ceil(Math.random() * 10),{
             retain: true,
         });   
     });
